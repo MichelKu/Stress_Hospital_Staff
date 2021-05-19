@@ -1,0 +1,5 @@
+# All pip install necessary for this projekt
+# Recommendation is to create a virutuel enviroment.
+# pip install sanic "databases[sqlite]" numpy scikit-learn pandas 
+# And xgboost if you want to run all_Models.py
+

@@ -1,0 +1,399 @@
+/* Import foints from fonts.css file */
+@import url(./partials/_variables.css);
+@import url(./fonts.css);
+@import url("https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css");
+
+/*************** START GIVE ALL PAGES A BACKGROUND IMAGE ***************/
+
+/* Give a background to the site-banner area which is the left side of the screen */
+/* 0% = background posistion horizontal 50% = background position vertical*/
+.site-main .site-banner {
+  background: url(../img/banner/home-banner.png) no-repeat 0% 50%;
+}
+
+.about-area,
+.insights-area,
+.predict-area {
+  background: url(../img/banner/home-banner.png) no-repeat 0% 10%;
+}
+
+/*************** END GIVE ALL PAGES A BACKGROUND IMAGE ***************/
+
+/*************** START STYLING OF HOME PAGE ***************/
+
+/* Styling of the word "Hey" at the very first page */
+.site-main .site-banner .site-title h3 {
+  padding-top: 35%;
+  font-weight: 500;
+  font-size: 60px;
+  animation: fadeInLeft;
+  animation-duration: 1.8s;
+}
+/* Creates a line after the word "Hey" */
+.site-main .site-banner .site-title h3::after {
+  content: " ";
+  height: 2px;
+  width: 18vw;
+  background: black;
+  display: inline-block;
+  margin-left: 5%;
+  transform: translateY(-10px);
+}
+
+/* styling of the text "I AM DR DE STRESS" */
+.site-main .site-banner .site-title h1 {
+  font-size: 50px;
+  animation: fadeInLeft;
+  animation-duration: 2.2s;
+}
+
+/* Styling of the text "MAKING HOSTPITALS..." at the first page */
+.site-main .site-banner .site-title h4 {
+  font-size: 1.5rem;
+  padding-bottom: 30px;
+  font-weight: black;
+  animation: fadeInLeft;
+  animation-duration: 2.4s;
+}
+
+/* Styling of first picture the right of first page */
+.img-fluid.robot-first-page {
+  animation: fadeInRight;
+  animation-duration: 3s;
+  padding-top: 30px;
+}
+
+/* Styling of the TITLE paragraph at the bottom right of the first page */
+.span {
+  animation: fadeInRight;
+  animation-duration: 3s;
+}
+
+/* Paragrapgh of first page at bottom right */
+.parahomepage {
+  font-size: 25px;
+  font-weight: 300;
+  animation: fadeInRight;
+  animation-duration: 3s;
+}
+/* Image left to the bottom paragraph at first page */
+.img-fluid.second-robot-first-page {
+  padding-left: 150px;
+  animation: fadeInLeft;
+  animation-duration: 3s;
+}
+
+/* Styling of the HIRE ME and GET CV buttons at first page */
+/* Also PREDICT button at predict page */
+.hireme,
+.getcv,
+.predict-btn {
+  padding: 0.8rem 2.2rem;
+  font: normal 500 16px/20px var(--roboto);
+  position: relative;
+  border: 2px solid;
+  border-radius: 4px;
+  animation: flipInX;
+  animation-duration: 4s;
+}
+
+.hireme,
+.getcv,
+.predict-btn {
+  background: var(--gradient-color);
+  /* background-clip: padding-box; */
+  color: #f5f5f5;
+  transition: all 0.8s ease-out;
+  box-shadow: var(--box-shadow);
+}
+
+.hireme:hover,
+.getcv:hover,
+.predict-btn:hover {
+  background: #f5f5f5;
+  /* background-clip: padding-box; */
+  color: #111111;
+}
+
+/* .hireme::after,
+.getcv::after,
+.predict-btn::after {
+  position: absolute;
+  top: -2px;
+  left: 2px;
+  bottom: -2px;
+  right: -2px;
+  background: var(--gradient-color);
+  content: "";
+  z-index: -1;
+  border-radius: 4px;
+} */
+
+/*************** START STYLING OF NAVIGATION BARS, THEY ARE SEPARETED ***************/
+
+/* START STYLING OF HOME NAVBAR CAUSE THEY USE ANIMATIONS */
+/* Adds padding and animation to the logo left of navbar */
+.header_area .main-menu .navbar .navbar-brand {
+  padding: 0 2rem 0 5rem;
+  animation: rotateInDownLeft;
+  animation-duration: 3s;
+}
+
+/* Adds padding to the navbar */
+.header_area .main-menu .navbar {
+  padding: 1rem 20rem;
+  animation: fadeInRight;
+  animation-duration: 3s;
+}
+
+/* Changes the properties of the navbar text elements*/
+/* 15px = font size and 2px = line height */
+.header_area .main-menu .nav-item .nav-link {
+  font: normal 500 15px/2px var(--roboto);
+
+  text-transform: uppercase;
+
+  padding: 1.7rem;
+  color: var(--title-color);
+}
+
+/* Access the navbar item and changes color when you hoover*/
+.header_area .main-menu .navbar-nav a:hover {
+  background: var(--gradient-color);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  animation: tada;
+  animation-duration: 1.5s;
+}
+
+/* START STYLING OF ABOUT NAVBAR */
+.header_area_about .main-menu .navbar .navbar-brand {
+  padding: 0 2rem 0 5rem;
+}
+
+/* Adds padding to the navbar */
+.header_area_about .main-menu .navbar {
+  padding: 1rem 20rem;
+}
+
+/* Changes the properties of the navbar text elements*/
+/* 15px = font size and 2px = line height */
+.header_area_about .main-menu .nav-item .nav-link {
+  font: normal 500 15px/2px var(--roboto);
+
+  text-transform: uppercase;
+
+  padding: 1.7rem;
+  color: var(--title-color);
+}
+
+/* Access the navbar item and changes color when you hoover*/
+.header_area_about .main-menu .navbar-nav a:hover {
+  background: var(--gradient-color);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  animation: tada;
+  animation-duration: 1.5s;
+}
+/* END STYLING OF ABOUT NAVBAR */
+
+/* START STYLING OF INSIGHTS NAVBAR */
+.header_area_insights .main-menu .navbar .navbar-brand {
+  padding: 0 2rem 0 5rem;
+}
+
+/* Adds padding to the navbar */
+.header_area_insights .main-menu .navbar {
+  padding: 1rem 20rem;
+}
+
+/* Changes the properties of the navbar text elements*/
+/* 15px = font size and 2px = line height */
+.header_area_insights .main-menu .nav-item .nav-link {
+  font: normal 500 15px/2px var(--roboto);
+
+  text-transform: uppercase;
+
+  padding: 1.7rem;
+  color: var(--title-color);
+}
+
+/* Access the navbar item and changes color when you hoover*/
+.header_area_insights .main-menu .navbar-nav a:hover {
+  background: var(--gradient-color);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  animation: tada;
+  animation-duration: 1.5s;
+}
+/* END STYLING OF INSIGHTS NAVBAR */
+
+/* START STYLING OF PREDICT NAVBAR */
+.header_area_predict .main-menu .navbar .navbar-brand {
+  padding: 0 2rem 0 5rem;
+}
+
+/* Adds padding to the navbar */
+.header_area_predict .main-menu .navbar {
+  padding: 1rem 20rem;
+}
+
+/* Changes the properties of the navbar text elements*/
+/* 15px = font size and 2px = line height */
+.header_area_predict .main-menu .nav-item .nav-link {
+  font: normal 500 15px/2px var(--roboto);
+
+  text-transform: uppercase;
+
+  padding: 1.7rem;
+  color: var(--title-color);
+}
+
+/* Access the navbar item and changes color when you hoover*/
+.header_area_predict .main-menu .navbar-nav a:hover {
+  background: var(--gradient-color);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  animation: tada;
+  animation-duration: 1.5s;
+}
+/* END STYLING OF PREDICT NAVBAR */
+/*************** END STYLING OF NAVIGATION BARS ***************/
+
+/*************** END STYLING OF HOME PAGE ***************/
+
+/*************** START STYLING OF ABOUT PAGE ***************/
+
+.paraaboutuspage {
+  font-size: 25px;
+  animation: fadeInBottomLeft;
+  animation-duration: 2s;
+  font-weight: 300;
+}
+
+.robot-about-page {
+  padding-top: 90px;
+  animation: fadeInBottomRight;
+  animation-duration: 2s;
+}
+
+.h3about {
+  animation: fadeInDownBig;
+  animation-duration: 2s;
+  padding-top: 85px;
+  font-size: 35px;
+}
+/*************** END STYLING OF ABOUT PAGE ***************/
+
+/*************** START STYLING OF INSIGHTS PAGE ***************/
+
+.title-text-insights {
+  padding-top: 85px;
+  font-weight: 500;
+  animation: fadeInLeft;
+  animation-duration: 3s;
+}
+
+.parainsights {
+  font-weight: 300;
+  font-size: 25px;
+  animation: rollIn;
+  animation-duration: 3s;
+}
+
+.insights-image {
+  padding-top: 115px;
+  animation: flipInY;
+  animation-duration: 3s;
+}
+
+/*************** END STYLING OF INSIGHTS PAGE ***************/
+
+/*************** START STYLING OF PREDICT PAGE ***************/
+
+.predict-title {
+  padding-top: 85px;
+  font-weight: 500;
+  animation: rotateIn;
+  animation-duration: 2s;
+}
+
+.predict-text {
+  padding-top: 25px;
+  padding-bottom: 15px;
+  font-size: 25px;
+  font-weight: 300;
+  animation: fadeInRight;
+  animation-duration: 2s;
+}
+
+/* Style on the chart.js component */
+.chart-container {
+  animation: fadeInRight;
+  animation-duration: 3s;
+}
+
+/* Styling of the radio buttons */
+.radiobuttons {
+  font-size: 18px;
+  margin: 0px 0px 0px 12px;
+  animation: flipInY;
+  animation-duration: 4s;
+  padding-bottom: 10px;
+}
+
+/* Styling of the question titles */
+.sectionlabel {
+  font-weight: 500;
+  font-size: 25px;
+  padding: 10px 0 10px 12px;
+  animation: fadeInLeft;
+  animation-duration: 2s;
+  color: #6351ce;
+}
+
+/* Styling of the robot picture in the predict page */
+.predict-image {
+  padding-top: 90px;
+  padding-right: 100px;
+  animation: fadeInRight;
+  animation-duration: 3s;
+}
+
+/* Styling of the paragraph under the chart.js component */
+.para-predict-results {
+  font-size: 25px;
+  font-weight: 500;
+  padding-left: 185px;
+  padding-top: 30px;
+}
+
+.predictionInfo {
+  height: 15rem;
+  padding: 30px 130px;
+  font-size: 2rem;
+  animation: zoomInRight;
+  animation-duration: 3s;
+}
+
+.special_tag {
+  height: 15rem;
+  /* padding: 0 130px; */
+  font-size: 2rem;
+  animation: zoomInRight;
+  animation-duration: 3s;
+}
+
+.predict-btn {
+  margin: 30px 12px;
+}
+/*
+.radio-buttons-section{
+  
+}
+*/
+/*************** END STYLING OF PREDICT PAGE ***************/
